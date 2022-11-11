@@ -189,83 +189,93 @@ export default function PrimarySearchAppBar() {
           <Box sx={{ width: 250 }} role="presentation">
             <List>
               <ListItem key={1}>
-                <ListItemButton>
-                <ListItemIcon>
-                  <HomeIcon />
-                </ListItemIcon>
-                  <ListItemText primary="Home" />
-                </ListItemButton>
-              </ListItem>
-              <ListItem key={2}>
-                <ListItemButton>
-                <ListItemIcon>
-                  <ClassIcon />
-                </ListItemIcon>
-                  <ListItemText primary="Classroom" />
-                </ListItemButton>
-              </ListItem>
-              <ListItem key={3}>
-                <ListItemButton>
-                <ListItemIcon>
-                  <AllInboxRoundedIcon />
-                </ListItemIcon>
-                  <ListItemText primary="Packages" />
-                </ListItemButton>
-              </ListItem>
-              <ListItem key={4}>
-                <ListItemButton>
-                <ListItemIcon>
-                  <PeopleOutlineRoundedIcon />
-                </ListItemIcon>
-                  <ListItemText primary="Student management" />
-                </ListItemButton>
-              </ListItem>
-              <ListItem key={5}>
-                <ListItemButton>
-                <ListItemIcon>
-                  <CurrencyRupeeRoundedIcon />
-                </ListItemIcon>
-                  <ListItemText primary="Payment Management" />
-                </ListItemButton>
-              </ListItem>
-              <ListItem key={6}>
-                <ListItemButton>
+              <ListItemButton>
+                  <Link to="/" style={{ textDecoration: "none" , color: "#808080" , display :"flex"}}>
                 <ListItemIcon>
                   <DashboardRoundedIcon />
                 </ListItemIcon>
                   <ListItemText primary="Dashboard" />
+                  </Link>
+                </ListItemButton>
+              </ListItem>
+              <ListItem key={2}>
+                <ListItemButton>
+                  <Link to="/classroom" style={{ textDecoration: "none" , color: "#808080" , display :"flex"}}>
+                <ListItemIcon>
+                  <ClassIcon />
+                </ListItemIcon>
+                  <ListItemText primary="Classroom" />
+                  </Link>
+                </ListItemButton>
+              </ListItem>
+              <ListItem key={3}>
+                <ListItemButton>
+                  <Link to="/packages" style={{ textDecoration: "none" , color: "#808080" , display :"flex"}}>
+                <ListItemIcon>
+                  <AllInboxRoundedIcon />
+                </ListItemIcon>
+                  <ListItemText primary="Packages" />
+                  </Link>
+                </ListItemButton>
+              </ListItem>
+              <ListItem key={4}>
+                <ListItemButton>
+                  <Link to="/studentmanagement" style={{ textDecoration: "none" , color: "#808080" , display :"flex"}}>
+                <ListItemIcon>
+                  <PeopleOutlineRoundedIcon />
+                </ListItemIcon>
+                  <ListItemText primary="Student management" />
+                  </Link>
+                </ListItemButton>
+              </ListItem>
+              <ListItem key={5}>
+                <ListItemButton>
+                  <Link to="/paymentmanagement" style={{ textDecoration: "none" , color: "#808080" , display :"flex"}}>
+                <ListItemIcon>
+                  <CurrencyRupeeRoundedIcon />
+                </ListItemIcon>
+                  <ListItemText primary="Payment Management" />
+                  </Link>
                 </ListItemButton>
               </ListItem>
               <ListItem key={7}>
                 <ListItemButton>
+                  <Link to="/liveclasses" style={{ textDecoration: "none" , color: "#808080" , display :"flex"}}>
                 <ListItemIcon>
                   <LaptopRoundedIcon />
                 </ListItemIcon>
                   <ListItemText primary="Live Classes" />
+                  </Link>
                 </ListItemButton>
               </ListItem>
               <ListItem key={8}>
                 <ListItemButton>
+                  <Link to="/couponmanagement" style={{ textDecoration: "none" , color: "#808080" , display :"flex"}}>
                 <ListItemIcon>
                   <SellRoundedIcon />
                 </ListItemIcon>
                   <ListItemText primary="Coupon Management" />
+                  </Link>
                 </ListItemButton>
               </ListItem>
               <ListItem key={9}>
                 <ListItemButton>
+                  <Link to="/newsalerts" style={{ textDecoration: "none" , color: "#808080" , display :"flex"}}>
                 <ListItemIcon>
                   <AddAlertRoundedIcon />
                 </ListItemIcon>
-                  <ListItemText primary="New Alerts" />
+                  <ListItemText primary="News Alerts" />
+                  </Link>
                 </ListItemButton>
               </ListItem>
               <ListItem key={10}>
                 <ListItemButton>
+                  <Link to="/settings" style={{ textDecoration: "none" , color: "#808080" , display :"flex"}}>
                 <ListItemIcon>
                   <SettingsRoundedIcon />
                 </ListItemIcon>
                   <ListItemText primary="Global Settings" />
+                  </Link>
                 </ListItemButton>
               </ListItem>
             </List>
@@ -349,6 +359,7 @@ export default function PrimarySearchAppBar() {
       </AppBar>
       {renderMobileMenu}
       {renderMenu}
+      
     </Box>
   );
 }

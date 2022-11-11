@@ -1,13 +1,15 @@
 import './App.css';
 import PrimarySearchAppBar from './components/navbar';
 import { Routes, Route } from "react-router-dom";
-import Navbar from './components/test';
-import SwipeableTemporaryDrawer from './components/sidetray';
-
+import BasicCard from "./components/Home/home";
 function App() {
   return (
    <>
     <PrimarySearchAppBar/>
+    <Routes>
+      <Route path="/" element={<BasicCard/>}/>
+    </Routes>
+
    </>
   );
 }
